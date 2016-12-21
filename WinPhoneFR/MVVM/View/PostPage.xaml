@@ -15,7 +15,7 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
+    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Center">
 
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/logo800x480.png" Opacity="0.2"/>
@@ -67,7 +67,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Style="{StaticResource BaseTextBlockStyle}" Margin="0,0.167,0,0" />
+        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
 
     </Grid>
 

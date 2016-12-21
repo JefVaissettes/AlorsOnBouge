@@ -120,7 +120,7 @@ namespace WinPhoneFR
             }
             else
             {
-                return;
+                ErrorMessage = "La rubrique sélectionnée n'a pas encore de sujet.";
             }
         }
 

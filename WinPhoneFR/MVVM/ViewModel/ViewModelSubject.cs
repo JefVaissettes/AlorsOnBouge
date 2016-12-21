@@ -147,7 +147,7 @@ namespace WinPhoneFR
             }
             else
             {
-                return;
+                ErrorMessage = "Le sujet sélectionné n'a pas encore de post.";
             }
         }
 

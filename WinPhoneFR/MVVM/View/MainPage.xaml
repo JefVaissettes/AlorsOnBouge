@@ -15,7 +15,7 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
+    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Center">
 
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/logo800x480.png" Opacity="0.2"/>
@@ -29,7 +29,7 @@
 
         <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic"/>
 
-        <Button x:Name="btCategorie" Grid.Row="1" HorizontalAlignment="Center" Content="Cliquez pour choisir une rubrique" Click="btCategorie_Click"/>
+        <Button x:Name="btCategorie" Grid.Row="1" HorizontalAlignment="Center" Content="Cliquez pour choisir une rubrique" Click="btCategorie_Click" Background="Transparent"/>
 
         <ListView x:Name="lstvRubric" Grid.Row="2" ItemsSource="{Binding Rubric}" Background="Transparent" Margin="10,50,10,60" VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1" >
             <ListView.ItemContainerStyle>

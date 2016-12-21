@@ -15,7 +15,7 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
+    <Grid Height="615" Margin="0,0,0,-0.333">
 
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/logo800x480.png" Opacity="0.2"/>
@@ -28,9 +28,9 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" Margin="111,0,112,56.167" Grid.RowSpan="2" Width="177"/>
+        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" Margin="111,0,112,56.167" Grid.RowSpan="2" Width="177"/>
 
-        <Button x:Name="btSubject" Grid.Row="1" HorizontalAlignment="Center" Content="Choisissez un sujet" BorderBrush="Black" FontSize="22" Height="58" Margin="94,20,94,26.167" Width="212" Click="btSubject_Click"/>
+        <Button x:Name="btSubject" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Choisissez un sujet" BorderBrush="White" FontSize="22" Height="58" Margin="96,34,92,12.167" Width="212" Click="btSubject_Click"/>
 
         <ListView x:Name="lstvSubject" Grid.Row="2" ItemsSource="{Binding Subject}" Background="Transparent" Margin="10,50.833,10,0" VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1"  >
             <ListView.ItemContainerStyle>
@@ -67,7 +67,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Style="{StaticResource BaseTextBlockStyle}" />
+        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" FontSize="17" FontWeight="Bold" TextAlignment="Center" />
 
     </Grid>
     
