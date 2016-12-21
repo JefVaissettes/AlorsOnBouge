@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="WinPhoneFR.PostPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:WinPhoneFR"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <Page.BottomAppBar>
+        <CommandBar ClosedDisplayMode="Minimal" Background="#1FA2E1">
+            <AppBarButton x:Name="mnuSynchro" x:Uid="PostPage_MnuSync" Icon="Refresh" Label="Rafraîchir" Click="mnuSynchro_Click"/>
+            <AppBarButton x:Name="mnuQuitter" x:Uid="PostPage_MnuQuit" Icon="Clear" Label="Quitter" Click="mnuQuitter_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
+
+        <Grid.Background>
+            <ImageBrush Stretch="Fill"/>
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" VerticalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1" x:Name="txtBckChoixPost" HorizontalAlignment="Center" Text="Post(s) du sujet sélectionné" FontSize="22" />
+
+        <ListView x:Name="lstvPost" Grid.Row="2" ItemsSource="{Binding Posts}" Background="Transparent" Margin="10,50,10,60"  VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemContainerTransitions>
+                <TransitionCollection>
+                    <AddDeleteThemeTransition/>
+                </TransitionCollection>
+            </ListView.ItemContainerTransitions>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                        <Button.Content>
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Vertical" >
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto"  FontWeight="Bold" FontSize="22" Foreground="#1FA2E1" Text="Contenu du post :" />
+                                    <TextBlock  FontSize="22"  TextWrapping="Wrap"  Text="{Binding PostContent}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" >
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto"  FontWeight="Bold" FontSize="22" Foreground="#1FA2E1" Text="Auteur :" />
+                                    <TextBlock FontSize="22" Text="{Binding Auteur}" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" >
+                                    <TextBlock Margin="0,0,10,0" VerticalAlignment="Bottom" Width="Auto"  FontWeight="Bold" FontSize="22" Foreground="#1FA2E1" Text="Date :" />
+                                    <TextBlock VerticalAlignment="Bottom" Width="Auto" TextWrapping="Wrap" Text="{Binding Date}"  FontSize="22" Height="Auto"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </Grid>
+    
+</Page>
