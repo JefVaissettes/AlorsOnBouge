@@ -15,24 +15,24 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Center">
+    <Grid Height="615" Margin="0,0,0,-0.333">
 
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/logo800x480.png" Opacity="0.2"/>
         </Grid.Background>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="36.166"/>
-            <RowDefinition Height="Auto" MinHeight="29.167"/>
+            <RowDefinition Height="Auto" MinHeight="36.667"/>
+            <RowDefinition Height="Auto" MinHeight="35"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" VerticalAlignment="Center" Height="30" Margin="111,3,112,3.166" Width="177"/>
+        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" VerticalAlignment="Center" Height="30" Margin="111,3,112,3.667" Width="177"/>
 
-        <TextBlock Grid.Row="1" x:Name="txtBckChoixPost" HorizontalAlignment="Center" Text="Post(s) du sujet sélectionné" FontSize="22" Margin="68,0.834,69,1.333" Width="263" />
+        <TextBlock Grid.Row="1" x:Name="txtBckChoixPost" HorizontalAlignment="Center" Text="Post(s) du sujet sélectionné" FontSize="23" Margin="64,2.333,55,3.667" Width="281" VerticalAlignment="Center"/>
 
-        <ListView x:Name="lstvPost" Grid.Row="2" ItemsSource="{Binding Posts}" Background="Transparent" Margin="10,49.667,10,0"  VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1">
+        <ListView x:Name="lstvPost" Grid.Row="2" ItemsSource="{Binding Posts}" Background="Transparent" Margin="10,51.333,10,0"  VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -67,7 +67,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" FontSize="18" FontWeight="Bold" TextAlignment="Center"/>
+        <TextBlock x:Name="txtErreur" Grid.Row="2" TextWrapping="WrapWholeWords" Text="{Binding ErrorMessage}" FontSize="36.5" FontWeight="Bold" TextAlignment="Justify" Margin="0,200,0,-2" Grid.RowSpan="2" Foreground="#1FA2E1"/>
 
     </Grid>
 
