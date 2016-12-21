@@ -17,6 +17,10 @@
 
     <Grid Height="615" Margin="0,0,0,-0.333" VerticalAlignment="Bottom">
 
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/logo800x480.png" Opacity="0.2"/>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
