@@ -11,6 +11,7 @@ namespace WinPhoneFR
         private ConsumeWSRest _cdDAL;
         private int _idCategorie;
         private string _Libelle;
+        private string _errorMessage;
 
         private ObservableCollection<ViewModelSubject> _colViewModelSubjects;
 
@@ -60,6 +61,19 @@ namespace WinPhoneFR
                 if(_Libelle != value)
                 {
                     _Libelle = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            private set
+            {
+                if (_errorMessage != value)
+                {
+                    _errorMessage = value;
                     RaisePropertyChanged();
                 }
             }

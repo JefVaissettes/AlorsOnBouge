@@ -25,6 +25,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" Margin="111,0,112,56.167" Grid.RowSpan="2" Width="177"/>
@@ -65,7 +66,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Style="{StaticResource BaseTextBlockStyle}" />
+
     </Grid>
     
 </Page>

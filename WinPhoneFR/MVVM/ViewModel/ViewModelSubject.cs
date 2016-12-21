@@ -15,6 +15,7 @@ namespace WinPhoneFR
         private DateTime _date;
         private string _auteur;
         private ConsumeWSRest _cdDAL;
+        private string _errorMessage;
 
         private ObservableCollection<ViewModelPost> _colViewModelPosts;
 
@@ -92,6 +93,19 @@ namespace WinPhoneFR
                 if (_auteur != value)
                 {
                     _auteur = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public string ErrorMessage
+        {
+            get { return _errorMessage; }
+            private set
+            {
+                if (_errorMessage != value)
+                {
+                    _errorMessage = value;
                     RaisePropertyChanged();
                 }
             }

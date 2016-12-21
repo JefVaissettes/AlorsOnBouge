@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+
     <Page.BottomAppBar>
         <CommandBar ClosedDisplayMode="Minimal" Background="#1FA2E1">
             <AppBarButton x:Name="mnuSynchro" x:Uid="PostPage_MnuSync" Icon="Refresh" Label="Rafraîchir" Click="mnuSynchro_Click"/>
@@ -20,18 +20,19 @@
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Assets/logo800x480.png" Opacity="0.2"/>
         </Grid.Background>
-        
+
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="36.166"/>
+            <RowDefinition Height="Auto" MinHeight="29.167"/>
+            <RowDefinition/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" VerticalAlignment="Center" Height="30" Margin="111,3,112,3.166" Width="177"/>
 
-        <TextBlock Grid.Row="1" x:Name="txtBckChoixPost" HorizontalAlignment="Center" Text="Post(s) du sujet sélectionné" FontSize="22" />
+        <TextBlock Grid.Row="1" x:Name="txtBckChoixPost" HorizontalAlignment="Center" Text="Post(s) du sujet sélectionné" FontSize="22" Margin="68,0.834,69,1.333" Width="263" />
 
-        <ListView x:Name="lstvPost" Grid.Row="2" ItemsSource="{Binding Posts}" Background="Transparent" Margin="10,50,10,60"  VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1">
+        <ListView x:Name="lstvPost" Grid.Row="2" ItemsSource="{Binding Posts}" Background="Transparent" Margin="10,49.667,10,0"  VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -65,7 +66,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <TextBlock x:Name="txtErreur" Grid.Row="3" Text="{Binding ErrorMessage}" Style="{StaticResource BaseTextBlockStyle}" Margin="0,0.167,0,0" />
+
     </Grid>
-    
+
 </Page>
