@@ -6,14 +6,17 @@ using System.Data;
 
 namespace BLLFR
 {
+    /// <summary>
+    /// Cette classe utilise les méthodes de la classe AccessDataBaseDAO
+    /// </summary>
     public class Outil
     {
         #region Rubrique
 
         /// <summary>
-        /// 
+        /// Méthode retournant la liste des rubriques
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Liste des rubriques du forum</returns>
         public static List<Rubric> GetAllRubrics()
         {
             DataTable dt = RubricDAO.GetAllRubrics();

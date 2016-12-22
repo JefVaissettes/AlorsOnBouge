@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace ConsumeWSR
 {
+    /// <summary>
+    /// Cette classe permet d'appeler un service REST en asynchrone. C'est la méthode GET qui est utilisée pour l'appel du service.
+    /// L'échange de données se fait en XML.
+    /// </summary>
     public class ConsumeWSRest
     {
         private const string ADR_GET_RUBRIC = "http://user12.2isa.org/ServiceFR.svc/Rubric";
@@ -23,6 +27,9 @@ namespace ConsumeWSR
 
         #region Rubric
 
+        /// <summary>
+        /// Instantiation de la liste Rubrique
+        /// </summary>
         public List<Rubric> Rubrics
         {
             get
@@ -31,6 +38,10 @@ namespace ConsumeWSR
             }
         }
 
+        /// <summary>
+        /// Appel d'un Service REST qui retourne un objet désérialisé.
+        /// </summary>
+        /// <returns>Objet de type Rubric désérialisé</returns>
         public async Task<List<Rubric>> getRubric()
         {
 
@@ -76,13 +87,23 @@ namespace ConsumeWSR
 
         #region Subject
 
+        /// <summary>
+        /// Instantiation de la liste Sujet
+        /// </summary>
         public List<Subject> subjects
         {
             get { return _subjects; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idcategorie"></param>
+        /// <returns></returns>
         public async Task<List<Subject>> getSujetByCategorieID(int idcategorie)
         {
+            // Création de l'instance HttpClient avec Timeout infini car c'est le CancellationToken qui gère l'arrêt ou le TimeOut de la tâche
+            // ATTENTION, en Windows phone on a quand même un timeout au bout de 60s
             using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
             {
                 // Permet de supprimer la mise en cache. En WindowsPhone, deux requêtes successives identiques retournent le résultat de la première 
@@ -130,6 +151,8 @@ namespace ConsumeWSR
         }
         public async Task<List<Post>> getReponseBySujet(int idsujet)
         {
+            // Création de l'instance HttpClient avec Timeout infini car c'est le CancellationToken qui gère l'arrêt ou le TimeOut de la tâche
+            // ATTENTION, en Windows phone on a quand même un timeout au bout de 60s
             using (HttpClient client = new HttpClient() { Timeout = TimeSpan.FromMilliseconds(Timeout.Infinite) })
             {
                 // Permet de supprimer la mise en cache. En WindowsPhone, deux requêtes successives identiques retournent le résultat de la première 

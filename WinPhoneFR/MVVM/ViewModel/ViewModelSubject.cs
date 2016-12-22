@@ -55,7 +55,6 @@ namespace WinPhoneFR
                     _idSubject = value;
                     RaisePropertyChanged();
                 }
-
             }
         }
 
