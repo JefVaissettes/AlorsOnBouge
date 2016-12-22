@@ -6,8 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/// <summary>
+/// 
+/// </summary>
 namespace DAO
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class PostDAO
     {
         #region "Property et attributs"
