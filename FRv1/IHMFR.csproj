@@ -154,9 +154,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassesMetiers\ClassesMetiers.csproj">
+    <ProjectReference Include="..\ClassesMetiers\BLLFR.csproj">
       <Project>{568cfc35-5b5c-4b74-b52b-3b575c8167e2}</Project>
-      <Name>ClassesMetiers</Name>
+      <Name>BLLFR</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetiersPortable\MetiersPortable.csproj">
       <Project>{DDD1D255-4261-4AC1-AF74-ED7ECA125E75}</Project>

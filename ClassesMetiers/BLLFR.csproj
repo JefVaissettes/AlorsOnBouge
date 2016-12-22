@@ -7,8 +7,8 @@
     <ProjectGuid>{568CFC35-5B5C-4B74-B52B-3B575C8167E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassesMetiers</RootNamespace>
-    <AssemblyName>ClassesMetiers</AssemblyName>
+    <RootNamespace>BLLFR</RootNamespace>
+    <AssemblyName>BLLFR</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

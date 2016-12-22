@@ -3,15 +3,11 @@ using MetiersPortable;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ClassesMetiers
+namespace BLLFR
 {
     public class Outil
     {
-
         #region Rubrique
 
         /// <summary>

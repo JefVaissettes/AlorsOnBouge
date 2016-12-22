@@ -124,9 +124,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassesMetiers\ClassesMetiers.csproj">
+    <ProjectReference Include="..\ClassesMetiers\BLLFR.csproj">
       <Project>{568cfc35-5b5c-4b74-b52b-3b575c8167e2}</Project>
-      <Name>ClassesMetiers</Name>
+      <Name>BLLFR</Name>
     </ProjectReference>
     <ProjectReference Include="..\MetiersPortable\MetiersPortable.csproj">
       <Project>{ddd1d255-4261-4ac1-af74-ed7eca125e75}</Project>

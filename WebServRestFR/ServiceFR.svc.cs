@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using ClassesMetiers;
+using BLLFR;
 using MetiersPortable;
 
 namespace WebServRestFR
@@ -26,8 +26,8 @@ namespace WebServRestFR
 
         public List<Subject> GetSujetsByCategorieID(string idrubric)
         {
-            int r; 
-            if(int.TryParse(idrubric, out r))
+            int r; //Variable locale de retour (résultat)
+            if (int.TryParse(idrubric, out r))
             {
                 return Outil.GetSujetsByCategorieID(r);
             }
@@ -36,6 +36,5 @@ namespace WebServRestFR
                 return null;
             }
         }
-
     }
 }

@@ -67,7 +67,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <TextBlock x:Name="txtErreur" Grid.Row="3" TextWrapping="WrapWholeWords" Text="{Binding ErrorMessage}" FontSize="26.5" FontWeight="Bold" TextAlignment="Justify" Margin="0,50,0,-2"  Foreground="#1FA2E1" />
+        <TextBlock x:Name="txtErreur" Grid.Row="3" TextWrapping="WrapWholeWords" Text="{Binding ErrorMessage}" FontSize="26.5" FontWeight="Bold" TextAlignment="Justify" Margin="0,50,0,-2"  Foreground="#1FA2E1"/>
 
     </Grid>
 

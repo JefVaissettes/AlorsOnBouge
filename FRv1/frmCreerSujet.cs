@@ -1,4 +1,4 @@
-﻿using ClassesMetiers;
+﻿using BLLFR;
 using MetiersPortable;
 using System;
 using System.Collections.Generic;
