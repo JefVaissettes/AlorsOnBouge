@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAO
 {
+    /// <summary>
+    /// UtilisateurDAO, permet de récupérer les catégories, qui se trouvent dans la base de données
+    /// </summary>
     public static class UtilisateurDAO
     {
         #region "Property et attributs"

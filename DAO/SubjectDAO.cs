@@ -4,6 +4,9 @@ using System.Data.SqlClient;
 
 namespace DAO
 {
+    /// <summary>
+    /// SubjectDAO, permet de récupérer les sujets, qui se trouvent dans la base de données
+    /// </summary>
     public static class SubjectDAO
     {
         #region "Property et attributs"

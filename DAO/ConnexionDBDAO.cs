@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 
 namespace DAO
 {
+    /// <summary>
+    /// Permet une connexion au serveur via la valeur encapsulée dans les paramètres du projet
+    /// </summary>
     public static class ConnexionDBDAO
     {
         private static string connexionString = Properties.Settings.Default.InfoConnexion;

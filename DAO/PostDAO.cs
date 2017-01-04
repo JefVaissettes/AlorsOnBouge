@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-/// <summary>
-/// 
-/// </summary>
 namespace DAO
 {
     /// <summary>
-    /// 
+    /// PostDAO, permet de récupérer les posts, qui se trouvent dans la base de données
     /// </summary>
     public static class PostDAO
     {

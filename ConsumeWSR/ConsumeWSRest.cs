@@ -67,7 +67,7 @@ namespace ConsumeWSR
         }
 
         /// <summary>
-        /// Désérialisation des données XML, les données ont été sérialisées par défaut en XML dans le contrat IServiceFR du WerService
+        /// Désérialisation des données XML, les données ont été sérialisées par défaut en XML dans le contrat IServiceFR du WebService
         /// </summary>
         /// <param name="content"></param>
         /// <returns></returns>
@@ -124,6 +124,11 @@ namespace ConsumeWSR
             }
         }
 
+        /// <summary>
+        /// Désérialisation des données XML, les données ont été sérialisées par défaut en XML dans le contrat IServiceFR du WebService
+        /// </summary>
+        /// <param name="content"></param>
+        /// <returns></returns>
         private List<Subject> DeserializeHttpContentSubject(HttpContent content)
 
         {
@@ -173,6 +178,11 @@ namespace ConsumeWSR
             }
         }
 
+        /// <summary>
+        /// Désérialisation des données XML, les données ont été sérialisées par défaut en XML dans le contrat IServiceFR du WebService
+        /// </summary>
+        /// <param name="content"></param>
+        /// <returns></returns>
         private List<Post> DeserializeHttpContentReponse(HttpContent content)
         {
             using (Stream s = content.ReadAsStreamAsync().Result)
