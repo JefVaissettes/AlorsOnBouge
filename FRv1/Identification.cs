@@ -14,7 +14,7 @@ namespace IHMFR
 
         private void Identification_Load(object sender, EventArgs e)
         {
-            txtLogin.Focus();
+            ActiveControl = txtLogin;
         }
 
         private void btAnnuler_Click(object sender, EventArgs e)

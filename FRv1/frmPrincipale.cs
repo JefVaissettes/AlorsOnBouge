@@ -134,7 +134,7 @@ namespace IHMFR
 
         private void btSupPost_Click(object sender, EventArgs e)
         {
-             DialogResult dr = new DialogResult();
+            DialogResult dr = new DialogResult();
             dr = MessageBox.Show(Properties.Resources.MsgBoxDeletePostText, Properties.Resources.MsgBoxDeletePostTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             if (dr == DialogResult.OK)
             {
@@ -251,10 +251,13 @@ namespace IHMFR
 
         private void displaydgVPost(List<Post> posts)
         {
-            dGVPost.DataSource = posts;
-            dGVPost.Columns["ID"].Visible = false;
-            dGVPost.Columns["SUJET"].Visible = false;
-            dGVPost.Columns["UTILISATEUR"].Visible = false;
+            if (posts != null)
+            {
+                dGVPost.DataSource = posts;
+                dGVPost.Columns["ID"].Visible = false;
+                dGVPost.Columns["SUJET"].Visible = false;
+                dGVPost.Columns["UTILISATEUR"].Visible = false;
+            }
         }
 
         private bool visibiliteSujets()
@@ -337,7 +340,7 @@ namespace IHMFR
         #region Affichage des posts en détail                
 
         private void dGVPost_CellClick(object sender, DataGridViewCellEventArgs e)
-        {            
+        {
             int CurrentRow = e.RowIndex;
 
             DataGridViewRow row = dGVPost.Rows[CurrentRow];

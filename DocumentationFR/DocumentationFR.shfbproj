@@ -59,11 +59,12 @@
     <RootNamespaceTitle>Documentation du fil rouge Alors on bouge !</RootNamespaceTitle>
     <NamespaceSummaries>
       <NamespaceSummaryItem name="(global)" isDocumented="True">aaaaaaaaaaaaaaaaaaaaaaaaa</NamespaceSummaryItem>
-<NamespaceSummaryItem name="BLLFR" isDocumented="True">Business Logic Layer fait le lien entre les classes métiers et le projet permettant l'accès à la base de données</NamespaceSummaryItem>
-<NamespaceSummaryItem name="DAO" isDocumented="True">Data Access Object design pattern de couche d'accès aux données</NamespaceSummaryItem>
-<NamespaceSummaryItem name="MetiersPortable" isDocumented="True">Classes métiers portables pour les deux applications</NamespaceSummaryItem>
-<NamespaceSummaryItem name="WebServRestFR" isDocumented="True">Webservice Rest pour l'application Windows Phone</NamespaceSummaryItem>
-<NamespaceSummaryItem name="ConsumeWSR" isDocumented="True">Appel des procédures stockées nécessaires aux fonctionnalités de l'application Windows Phone et désérialisation des données</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="BLLFR" isDocumented="True">Business Logic Layer fait le lien entre les classes métiers et le projet permettant l'accès à la base de données</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="DAO" isDocumented="True">Data Access Object design pattern de couche d'accès aux données</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="MetiersPortable" isDocumented="True">Classes métiers portables pour les deux applications</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="WebServRestFR" isDocumented="True">Webservice Rest pour l'application Windows Phone</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="ConsumeWSR" isDocumented="True">Appel des procédures stockées nécessaires aux fonctionnalités de l'application Windows Phone et désérialisation des données</NamespaceSummaryItem>
+    </NamespaceSummaries>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

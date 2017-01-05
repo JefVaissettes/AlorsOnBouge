@@ -92,6 +92,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreerPost";
             this.Text = "Alors on bouge !";
+            this.Load += new System.EventHandler(this.CreerPost_Load);
             this.gpBxCreatePost.ResumeLayout(false);
             this.gpBxCreatePost.PerformLayout();
             this.ResumeLayout(false);

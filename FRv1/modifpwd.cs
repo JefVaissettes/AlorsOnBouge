@@ -11,9 +11,14 @@ namespace IHMFR
             InitializeComponent();
         }
 
+        private void modifpwd_Load(object sender, EventArgs e)
+        {
+            ActiveControl = txtNewPwd;
+        }
+
         private void btAnnuler_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void btValider_Click(object sender, EventArgs e)
@@ -38,5 +43,7 @@ namespace IHMFR
         {
             btValider.Enabled = !(string.IsNullOrWhiteSpace(txtNewPwd.Text) || string.IsNullOrWhiteSpace(txtConfirmNewPwd.Text)) && txtNewPwd.Text == txtConfirmNewPwd.Text;
         }
+
+
     }
 }

@@ -136,6 +136,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "modifpwd";
             this.Text = "Alors on bouge !";
+            this.Load += new System.EventHandler(this.modifpwd_Load);
             this.gpbxModifIdentity.ResumeLayout(false);
             this.gpbxModifIdentity.PerformLayout();
             this.ResumeLayout(false);
