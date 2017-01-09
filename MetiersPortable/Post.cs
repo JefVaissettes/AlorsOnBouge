@@ -3,6 +3,9 @@ using System.Runtime.Serialization;
 
 namespace MetiersPortable
 {
+    /// <summary>
+    /// Un post est défini par son id contenu sujet auquel il appartient, 
+    /// </summary>
     [DataContract]
     public class Post
     {

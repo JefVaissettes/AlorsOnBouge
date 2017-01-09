@@ -65,5 +65,33 @@ namespace IHMFR
         {
             Close();
         }
+
+        /// <summary>
+        /// Grisage du bouton de validation tant que les champs ne sont pas renseignés
+        /// </summary>
+        private void fonctionGrisageBtSujet()
+        {
+            btValider.Enabled = !String.IsNullOrWhiteSpace(txtBxTitreSujet.Text) && !String.IsNullOrWhiteSpace(txtBxDescSujet.Text);
+        }
+
+        /// <summary>
+        /// Appel de la fonction grisage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtBxTitreSujet_TextChanged(object sender, EventArgs e)
+        {
+            fonctionGrisageBtSujet();
+        }
+
+        /// <summary>
+        /// Appel de la fonction grisage
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtBxDescSujet_TextChanged(object sender, EventArgs e)
+        {
+            fonctionGrisageBtSujet();
+        }
     }
 }

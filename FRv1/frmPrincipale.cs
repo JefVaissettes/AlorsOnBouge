@@ -68,14 +68,14 @@ namespace IHMFR
         }
 
         private void btCreerSujet_Click(object sender, EventArgs e)
-        {
-            using (frmCreerSujet creerSujet = new frmCreerSujet())
-            {
-                creerSujet.rubric = (Rubric)cbBxRubric.SelectedItem;
-                creerSujet.Text = string.Format("Ajouter le sujet dans la rubrique {0}", creerSujet.rubric.Libelle);
-                creerSujet.ShowDialog();
-                displaycbBxSubject(Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue));
-            }
+        {            
+                using (frmCreerSujet creerSujet = new frmCreerSujet())
+                {
+                    creerSujet.rubric = (Rubric)cbBxRubric.SelectedItem;
+                    creerSujet.Text = string.Format("Ajouter le sujet dans la rubrique {0}", creerSujet.rubric.Libelle);
+                    creerSujet.ShowDialog();
+                    displaycbBxSubject(Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue));
+                }        
         }
 
         private void btCreerPost_Click(object sender, EventArgs e)

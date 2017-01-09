@@ -40,6 +40,14 @@ namespace IHMFR
             }
         }
 
+        private void fonctionGrisageBtPost()
+        {
+            btValider.Enabled = !String.IsNullOrWhiteSpace(txtPostContent.Text);
+        }
 
+        private void txtPostContent_TextChanged(object sender, EventArgs e)
+        {
+            fonctionGrisageBtPost();
+        }
     }
 }

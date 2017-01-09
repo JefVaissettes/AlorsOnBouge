@@ -90,9 +90,15 @@ namespace WinPhoneFR
 
         private async void btSubject_Click(object sender, RoutedEventArgs e)
         {
+            prbtSubj.IsActive = true;
+            prbtSubj.Visibility = Visibility.Visible;
+
             btSubject.Visibility = Visibility.Collapsed;
             await _viewModelRubric.GetSujetByCategorieID();
             btSubject.Visibility = Visibility.Visible;
+
+            prbtSubj.IsActive = false;
+            prbtSubj.Visibility = Visibility.Collapsed;
         }
 
         #endregion Evenements        

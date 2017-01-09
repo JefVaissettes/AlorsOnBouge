@@ -31,6 +31,7 @@
         <TextBlock Grid.Row="0" x:Name="textBlockTitre" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Alors on bouge !" FontSize="25" FontStyle="Italic" Margin="111,0,112,56.167" Grid.RowSpan="2" Width="177"/>
 
         <TextBlock x:Name="btSubject" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Choisissez un sujet"  FontSize="23" Height="30" Margin="96,51,112,23.167" Width="192" />
+        <ProgressRing x:Name="prbtSubj" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <ListView x:Name="lstvSubject" Grid.Row="2" ItemsSource="{Binding Subject}" Background="Transparent" Margin="10,50.833,10,0" VerticalAlignment="Top" FontSize="18" Foreground="#1FA2E1"  >
             <ListView.ItemContainerStyle>

@@ -49,9 +49,16 @@ namespace WinPhoneFR
 
         private async void btCategorie_Click(object sender, RoutedEventArgs e)
         {
+            prbtCat.IsActive = true;
+            prbtCat.Visibility = Visibility.Visible;
+
             btCategorie.Visibility = Visibility.Collapsed;
             await _monitorViewModel.GetRubric();
             btCategorie.Visibility = Visibility.Visible;
+
+            prbtCat.IsActive = false;
+            prbtCat.Visibility = Visibility.Collapsed;        
+
         }
 
         /// <summary>

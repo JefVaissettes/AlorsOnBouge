@@ -30,7 +30,7 @@ namespace IHMFR
             {
                 Outil.ModifierPassword(Accueil.CurrentUsers.Id, txtNewPwd.Text);
                 btValider.Visible = true;
-                this.Close();
+                Close();
             }
         }
 

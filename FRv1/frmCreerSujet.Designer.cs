@@ -55,6 +55,7 @@
             this.txtBxTitreSujet.Name = "txtBxTitreSujet";
             this.txtBxTitreSujet.Size = new System.Drawing.Size(337, 20);
             this.txtBxTitreSujet.TabIndex = 0;
+            this.txtBxTitreSujet.TextChanged += new System.EventHandler(this.txtBxTitreSujet_TextChanged);
             // 
             // gBxDescription
             // 
@@ -74,6 +75,7 @@
             this.txtBxDescSujet.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtBxDescSujet.Size = new System.Drawing.Size(337, 133);
             this.txtBxDescSujet.TabIndex = 0;
+            this.txtBxDescSujet.TextChanged += new System.EventHandler(this.txtBxDescSujet_TextChanged);
             // 
             // btAnnuler
             // 
@@ -90,6 +92,7 @@
             // btValider
             // 
             this.btValider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btValider.Enabled = false;
             this.btValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btValider.Location = new System.Drawing.Point(273, 304);
             this.btValider.Name = "btValider";
