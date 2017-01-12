@@ -4,6 +4,10 @@ using System.Runtime.Serialization;
 
 namespace MetiersPortable
 {
+    /// <summary>
+    /// Subject défini par son ID, contenu, titre, date et auteur
+    /// Subject fait partie d'une Rubric
+    /// </summary>
     [DataContract]
     public class Subject
     {
@@ -73,24 +77,22 @@ namespace MetiersPortable
             set { _Rubric = value; }
         }
 
-        /// <summary>
-        /// L'utilisateur qui a crée et posté la reponse
-        /// </summary>
-
         [DataMember]
         private Utilisateur _Utilisateur;
+        /// <summary>
+        /// L'utilisateur qui a créé et posté le post
+        /// </summary>
         public Utilisateur Utilisateur
         {
             get { return _Utilisateur; }
             set { _Utilisateur = value; }
         }
 
-        /// <summary>
-        /// L'auteur de la reponse
-        /// </summary>
-
         [DataMember]
         private string _Auteur;
+        /// <summary>
+        /// Auteur du Post
+        /// </summary>
         public string Auteur
         {
             get { return _Auteur; }
@@ -125,7 +127,7 @@ namespace MetiersPortable
         /// Constructeur d'un sujet, avec des posts en réponse, on fait appel au constructeur du sujet sans réponse
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="title"></param>
+        /// <param name="titre"></param>
         /// <param name="description"></param>
         /// <param name="rubric"></param>
         /// <param name="Posts"></param>
@@ -154,10 +156,15 @@ namespace MetiersPortable
 
         #region "Methodes"
 
+        /// <summary>
+        /// Méthode permettant de connaître l'username du redacteur du sujet
+        /// </summary>
+        /// <returns>Username</returns>
         public string GetUsername()
         {
             return Utilisateur.Username;
         }
+
         #endregion
     }
 }

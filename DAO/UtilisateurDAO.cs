@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 namespace DAO
 {
     /// <summary>
-    /// UtilisateurDAO, permet de récupérer les catégories, qui se trouvent dans la base de données
+    /// UtilisateurDAO, permet de procéder à des actions sur la table Utilisateur du SGBD
     /// </summary>
     public static class UtilisateurDAO
     {
@@ -53,6 +53,11 @@ namespace DAO
             }
         }
 
+        /// <summary>
+        /// Méthode permettant de récupérer un utilisateur par son ID
+        /// </summary>
+        /// <param name="idutilisateur"></param>
+        /// <returns></returns>
         public static DataTable GetUserByID(int idutilisateur)
         {
             SqlCommand cmd = con.CreateCommand();
@@ -78,6 +83,10 @@ namespace DAO
             }
         }
 
+        /// <summary>
+        /// Méthode permettant de récupérer tous les utilisateurs
+        /// </summary>
+        /// <returns></returns>
         public static DataTable GetAllUtilisateurs()
         {
             SqlCommand cmd = con.CreateCommand();
@@ -90,6 +99,12 @@ namespace DAO
             return dt;
         }
 
+        /// <summary>
+        /// Méthode permettant de modifier un mot de passe
+        /// </summary>
+        /// <param name="iduser"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static int ModifierPassword(int iduser, string password)
         {
             SqlCommand cmd = con.CreateCommand();
@@ -118,7 +133,6 @@ namespace DAO
                 return 0;
             }
         }
-
         #endregion
     }
 }

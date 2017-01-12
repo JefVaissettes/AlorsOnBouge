@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 namespace DAO
 {
     /// <summary>
-    /// PostDAO, permet de récupérer les posts, qui se trouvent dans la base de données
+    /// PostDAO, permet de procéder à des actions sur la table Rubric du SGBD
     /// </summary>
     public static class PostDAO
     {
@@ -13,10 +13,7 @@ namespace DAO
 
         private static SqlConnection con = ConnexionDBDAO.GetConnexion();
 
-        #endregion
-
-        #region "Constructeurs"
-        #endregion
+        #endregion       
 
         #region "Methodes"
 
@@ -56,9 +53,9 @@ namespace DAO
         /// La méthode AddReponse, permet d'ajouter une reponse au sujet passé en paramateur
         /// par un utilisateur connecté
         /// </summary>
-        /// <param name="id_subject">L'identifiant du sujet concerné</param>
-        /// <param name="id_users">L'identifiant de l'utilisateur, qui répond</param>
-        /// <param name="post_content">Le texte de la reponse</param>
+        /// <param name="idSubject">L'identifiant du sujet concerné</param>
+        /// <param name="idUsers">L'identifiant de l'utilisateur, qui répond</param>
+        /// <param name="texte">Le texte de la reponse</param>
         /// <returns></returns>
         public static int AddReponse(int idUsers, int idSubject, string texte)
         {

@@ -2,6 +2,9 @@
 
 namespace MetiersPortable
 {
+    /// <summary>
+    /// Rubric défini par son ID, et son titre
+    /// </summary>
     [DataContract]
     public class Rubric
 
@@ -41,8 +44,8 @@ namespace MetiersPortable
         /// <summary>
         /// Constructeur d'une rubrique
         /// </summary>
-        /// <param name="id_rubric">L'identifiant d'une rubrique</param>
-        /// <param name="rubric_title">Titre d'une rubrique</param>
+        /// <param name="id">L'identifiant d'une rubrique</param>
+        /// <param name="title">Titre d'une rubrique</param>
         /// 
         public Rubric(int id, string title)
         {

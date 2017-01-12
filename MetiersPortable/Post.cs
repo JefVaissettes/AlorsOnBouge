@@ -4,75 +4,77 @@ using System.Runtime.Serialization;
 namespace MetiersPortable
 {
     /// <summary>
-    /// Un post est défini par son id contenu sujet auquel il appartient, 
+    /// Post défini par son ID, contenu, date et auteur
+    /// Post fait partie d'un sujet
     /// </summary>
     [DataContract]
     public class Post
     {
         #region "Property et attributs"
 
+        [DataMember]
+        private int _Id;
         /// <summary>
         /// L'identifiant de la reponse
         /// </summary>
-        [DataMember]
-        private int _Id;
         public int Id
         {
             get { return _Id; }
             set { _Id = value; }
         }
 
+
+        [DataMember]
+        private string _PostContent;
         /// <summary>
         /// Le texte de la reponse
         /// </summary>
-        [DataMember]
-        private string _PostContent;
         public string PostContent
         {
             get { return _PostContent; }
             set { _PostContent = value; }
         }
 
+
+        [DataMember]
+        private Subject _Sujet;
         /// <summary>
         ///Le sujet auquel appartient la reponse
         /// </summary>
-        [DataMember]
-        private Subject _Sujet;
         public Subject Sujet
         {
             get { return _Sujet; }
             set { _Sujet = value; }
         }
 
+
+        [DataMember]
+        private DateTime _Date;
         /// <summary>
         /// La date de creation de la reponse
         /// </summary>
-        [DataMember]
-        private DateTime _Date;
         public DateTime Date
         {
             get { return _Date; }
             set { _Date = value; }
         }
 
+        [DataMember]
+        private Utilisateur _Utilisateur;
         /// <summary>
         /// L'utilisateur qui a crée et posté la reponse
         /// </summary>
-
-        [DataMember]
-        private Utilisateur _Utilisateur;
         public Utilisateur Utilisateur
         {
             get { return _Utilisateur; }
             set { _Utilisateur = value; }
         }
 
+        [DataMember]
+        private string _Auteur;
         /// <summary>
         /// L'auteur de la reponse
         /// </summary>
-
-        [DataMember]
-        private string _Auteur;
         public string Auteur
         {
             get { return _Auteur; }
@@ -122,9 +124,9 @@ namespace MetiersPortable
         #region "Methodes"
 
         /// <summary>
-        /// La méthode permet de reccupèré le nom de l'utilisateur 
+        /// Méthode permettant de connaître l'username du redacteur du post
         /// </summary>
-        /// <returns>Username (nom de l'utilisateur)</returns>
+        /// <returns>Username</returns>
         public string GetUsername()
         {
             return Utilisateur.Username;

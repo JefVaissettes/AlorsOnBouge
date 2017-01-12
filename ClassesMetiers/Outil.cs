@@ -7,7 +7,7 @@ using System.Data;
 namespace BLLFR
 {
     /// <summary>
-    /// Cette classe utilise les méthodes de la classe AccessDataBaseDAO
+    /// Cette classe utilise les méthodes des classes DAO
     /// </summary>
     public class Outil
     {
@@ -106,12 +106,11 @@ namespace BLLFR
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="id_subject"></param>
+        /// <param name="idsubject"></param>
         /// <returns></returns>
         public static Subject GetSujetByID(int idsubject)
         {
             DataTable dt = SubjectDAO.GetSujetByID(idsubject);
-            //DataTable dt = SubjectDAO.GetSujetByID(id_subject);
             if (dt.Rows.Count == 1)
             {
                 DataRow row = dt.Rows[0];
@@ -140,9 +139,9 @@ namespace BLLFR
         /// 
         /// </summary>
         /// <param name="idsubject"></param>
-        /// <param name="oldtitre"></param>
+        /// <param name="oldTitre"></param>
         /// <param name="newTitre"></param>
-        /// <param name="olddescription"></param>
+        /// <param name="oldDescription"></param>
         /// <param name="newDescription"></param>
         /// <returns></returns>
         public static int ModifierSujet(int idsubject, string oldTitre, string newTitre, string oldDescription, string newDescription)
@@ -153,7 +152,7 @@ namespace BLLFR
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="idsujet"></param>
+        /// <param name="idSubject"></param>
         /// <returns></returns>
         public static int DeleteSujet(int idSubject)
         {
@@ -235,6 +234,11 @@ namespace BLLFR
 
         #region Post
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id_subject"></param>
+        /// <returns></returns>
         public static List<Post> GetAllReponseBySujet(int id_subject)
         {
             DataTable dt = PostDAO.GetAllReponseBySujet(id_subject);
@@ -252,11 +256,23 @@ namespace BLLFR
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idUsers"></param>
+        /// <param name="idSubject"></param>
+        /// <param name="texte"></param>
+        /// <returns></returns>
         public static int AddReponse(int idUsers, int idSubject, string texte)
         {
             return PostDAO.AddReponse(idUsers, idSubject,  texte);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idPost"></param>
+        /// <returns></returns>
         public static int DeleteReponse(int idPost)
         {
             return PostDAO.DeleteReponse(idPost);

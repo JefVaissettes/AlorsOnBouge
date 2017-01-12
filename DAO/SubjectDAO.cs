@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 namespace DAO
 {
     /// <summary>
-    /// SubjectDAO, permet de récupérer les sujets, qui se trouvent dans la base de données
+    /// SubjectDAO, permet de procéder à des actions sur la table Subject du SGBD
     /// </summary>
     public static class SubjectDAO
     {
@@ -43,7 +43,7 @@ namespace DAO
         /// <summary>
         /// La methode GetSujetsByCategorie, permet de récupéré tous les sujets d'une catégorie
         /// </summary>
-        /// <param name="id_rubric">L'identifiant de la catégorie</param>
+        /// <param name="idrubric">L'identifiant de la catégorie</param>
         /// <returns>La liste des sujets pour une catégorie donnée</returns>
 
         public static DataTable GetSujetsByCategorieID(int idrubric)
@@ -74,7 +74,7 @@ namespace DAO
         /// <summary>
         /// La Méthode GetSujetByID, permet de retourné un sujet dont l'identifiant est passé en parametre
         /// </summary>
-        /// <param name="id_subject">L'identifiant du sujet</param>
+        /// <param name="idsubject">L'identifiant du sujet</param>
         /// <returns>Le sujet, dont l'identifiant est passé en paramatre </returns>
         public static DataTable GetSujetByID(int idsubject)
         {
@@ -106,7 +106,7 @@ namespace DAO
         /// La méthode AddSujet, permet l'ajout d'un nouveau sujet à la table sujet 
         /// dans la base de données
         /// </summary>
-        /// <param name="idCategorie">L'identifiant de la catégorie</param>
+        /// <param name="idRubric">L'identifiant de la catégorie</param>
         /// <param name="idUtilisateur">L'identifiant de l'utilisateur</param>
         /// <param name="description">La description du sujet</param>
         /// <param name="titre">Le titre su sujet</param>
@@ -154,9 +154,11 @@ namespace DAO
         /// La méthode ModifierSujet, permet la modification d'un sujet en lui changeant le titre et/ou la description
         /// on passe les anciennes données en paramètres
         /// </summary>
-        /// <param name="subject">le sujet à modifier</param>
-        /// <param name="newTitre">le nouveau titre</param>
-        /// <param name="newDescription">la nouvelle description</param>
+        /// <param name="idsubject"></param>
+        /// <param name="oldTitre"></param>
+        /// <param name="newTitre"></param>
+        /// <param name="oldDescription"></param>
+        /// <param name="newDescription"></param>
         /// <returns>le nombre de ligne modifié, nbligne = 1 si tout va bien</returns>
         public static int ModifierSujet(int idsubject, string oldTitre, string newTitre, string oldDescription, string newDescription)
         {
@@ -206,7 +208,7 @@ namespace DAO
         /// La méthode DeleteSujet, permet la suppression d'un sujet
         /// dont l'id est passé en parametre
         /// </summary>
-        /// <param name="id_subject">L'identifiant du sujet</param>
+        /// <param name="idSubject">L'identifiant du sujet</param>
         /// <returns>Le nombre de lignes supprimées, nbligne = 1 si tout va bien</returns>
         public static int DeleteSujet(int idSubject)
         {

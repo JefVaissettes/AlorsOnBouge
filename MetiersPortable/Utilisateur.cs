@@ -2,6 +2,9 @@
 
 namespace MetiersPortable
 {
+    /// <summary>
+    /// Utilisateur défini par son ID, nom, mot de passe, email et rôle
+    /// </summary>
     [DataContract]
     public class Utilisateur
     {
@@ -78,7 +81,7 @@ namespace MetiersPortable
         /// <param name="username">Nom d'un utilisateur</param>
         /// <param name="password">Mot de passe d'un utilisateur</param>
         /// <param name="email">Email d'un utilisateur</param>
-        /// <param name="role">Role d'un utilisateur</param>
+        /// <param name="isRmod">Role d'un utilisateur</param>
         public Utilisateur(int id, string username, string password, string email, bool isRmod)
         {
             this.Id = id;
@@ -88,6 +91,13 @@ namespace MetiersPortable
             this.IsRmod = isRmod;
         }
 
+        /// <summary>
+        /// Autre constructeur
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="isRmod"></param>
         public Utilisateur(int id, string username, string password, bool isRmod)
         {
             this.Id = id;

@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 namespace DAO
 {
     /// <summary>
-    /// RubricDAO, permet de récupérer les catégories, qui se trouvent dans la base de données
+    /// RubricDAO, permet de procéder à des actions sur la table Rubric du SGBD
     /// </summary>
     /// 
     public static class RubricDAO
