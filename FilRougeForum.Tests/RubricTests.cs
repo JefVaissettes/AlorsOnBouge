@@ -23,6 +23,9 @@ namespace FilRougeForum.Tests
             Assert.AreEqual(rubric.Libelle, expectedString);
         }
 
+        /// <summary>
+        /// Test sur le fonctionnement de la méthode
+        /// </summary>
         [TestMethod]
         public void TestGetRubricByID()
         {

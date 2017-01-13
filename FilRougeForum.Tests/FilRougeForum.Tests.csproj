@@ -56,6 +56,7 @@
     <Compile Include="PostTests.cs" />
     <Compile Include="RubricTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubjectTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassesMetiers\BLLFR.csproj">

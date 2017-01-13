@@ -165,6 +165,25 @@ namespace MetiersPortable
             return Utilisateur.Username;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals (object obj)
+        {
+            if (obj == null || obj.GetType() != this.GetType())
+
+            {
+                return false;
+            }
+
+            Subject suj = (Subject)obj;
+
+            return Id == suj.Id;
+
+        }
+
         #endregion
     }
 }
