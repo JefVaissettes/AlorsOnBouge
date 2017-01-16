@@ -72,7 +72,8 @@ namespace IHMFR
                 using (frmCreerSujet creerSujet = new frmCreerSujet())
                 {
                     creerSujet.rubric = (Rubric)cbBxRubric.SelectedItem;
-                    creerSujet.Text = string.Format("Ajouter le sujet dans la rubrique {0}", creerSujet.rubric.Libelle);
+                    creerSujet.Text = string.Format("Ajouter le sujet dans la rubrique {0}",
+                    creerSujet.rubric.Libelle);
                     creerSujet.ShowDialog();
                     displaycbBxSubject(Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue));
                 }        
@@ -108,15 +109,19 @@ namespace IHMFR
         private void btSupSujet_Click(object sender, EventArgs e)
         {
             DialogResult dr = new DialogResult();
-            dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText, Properties.Resources.MsgBoxDeleteSujetTitre, MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText, 
+                Properties.Resources.MsgBoxDeleteSujetTitre, MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Exclamation);
             if (dr == DialogResult.OK)
             {
                 if (Outil.DeleteSujet((int)cbBxSubject.SelectedValue) != 1)
                 {
-                    MessageBox.Show(Properties.Resources.MsgBoxErreurDeleteSujetText, Properties.Resources.MsgBoxErreurDeleteSujetTitre);
-
+                    MessageBox.Show(Properties.Resources.MsgBoxErreurDeleteSujetText, 
+                    Properties.Resources.MsgBoxErreurDeleteSujetTitre);
                 }
-                List<Subject> subjects = Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue);
+                List<Subject> subjects = 
+                    Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue);
+
                 if (subjects != null)
                 {
                     displaycbBxSubject(subjects);
@@ -351,9 +356,7 @@ namespace IHMFR
                 frmdetailpost.lblDateCreation.Text += row.Cells["Date"].Value.ToString();
                 frmdetailpost.ShowDialog();
             }
-
         }
-
         #endregion
 
     }

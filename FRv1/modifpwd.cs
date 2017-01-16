@@ -43,7 +43,5 @@ namespace IHMFR
         {
             btValider.Enabled = !(string.IsNullOrWhiteSpace(txtNewPwd.Text) || string.IsNullOrWhiteSpace(txtConfirmNewPwd.Text)) && txtNewPwd.Text == txtConfirmNewPwd.Text;
         }
-
-
     }
 }

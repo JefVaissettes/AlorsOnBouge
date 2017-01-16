@@ -6,7 +6,6 @@ namespace IHMFR
 {
     public partial class Identification : Form
     {
-
         public Identification()
         {
             InitializeComponent();
