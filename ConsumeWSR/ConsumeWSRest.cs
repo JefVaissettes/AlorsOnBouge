@@ -143,17 +143,22 @@ namespace ConsumeWSR
             }
         }
 
-
-
         #endregion Subject
-
 
         #region Post
 
+        /// <summary>
+        /// 
+        /// </summary>
         public List<Post> posts
         {
             get { return _posts; }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idsujet"></param>
+        /// <returns></returns>
         public async Task<List<Post>> getReponseBySujet(int idsujet)
         {
             // Création de l'instance HttpClient avec Timeout infini car c'est le CancellationToken qui gère l'arrêt ou le TimeOut de la tâche

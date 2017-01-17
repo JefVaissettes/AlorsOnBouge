@@ -4,13 +4,25 @@ using MetiersPortable;
 
 namespace WebServRestFR
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ServiceFR : IServiceFR
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<Rubric> GetAllCategories()
         {
             return Outil.GetAllRubrics();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id_subject"></param>
+        /// <returns></returns>
         public List<Post> GetAllReponseBySujet(string id_subject)
         {
             int r; //Variable locale de retour (résultat)
@@ -24,6 +36,11 @@ namespace WebServRestFR
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idrubric"></param>
+        /// <returns></returns>
         public List<Subject> GetSujetsByCategorieID(string idrubric)
         {
             int r; //Variable locale de retour (résultat)

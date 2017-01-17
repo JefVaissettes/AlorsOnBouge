@@ -86,7 +86,6 @@ namespace WinPhoneFR
 
         #endregion¨Propriétés bindables
 
-
         #region Méthodes
 
         public override string ToString()
