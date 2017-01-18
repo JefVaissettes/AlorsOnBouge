@@ -68,15 +68,15 @@ namespace IHMFR
         }
 
         private void btCreerSujet_Click(object sender, EventArgs e)
-        {            
-                using (frmCreerSujet creerSujet = new frmCreerSujet())
-                {
-                    creerSujet.rubric = (Rubric)cbBxRubric.SelectedItem;
-                    creerSujet.Text = string.Format("Ajouter le sujet dans la rubrique {0}",
-                    creerSujet.rubric.Libelle);
-                    creerSujet.ShowDialog();
-                    displaycbBxSubject(Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue));
-                }        
+        {
+            using (frmCreerSujet creerSujet = new frmCreerSujet())
+            {
+                creerSujet.rubric = (Rubric)cbBxRubric.SelectedItem;
+                creerSujet.Text = string.Format("Ajouter le sujet dans la rubrique {0}",
+                creerSujet.rubric.Libelle);
+                creerSujet.ShowDialog();
+                displaycbBxSubject(Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue));
+            }
         }
 
         private void btCreerPost_Click(object sender, EventArgs e)
@@ -109,17 +109,17 @@ namespace IHMFR
         private void btSupSujet_Click(object sender, EventArgs e)
         {
             DialogResult dr = new DialogResult();
-            dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText, 
+            dr = MessageBox.Show(Properties.Resources.MsgBoxDeleteSujetText,
                 Properties.Resources.MsgBoxDeleteSujetTitre, MessageBoxButtons.OKCancel,
                 MessageBoxIcon.Exclamation);
             if (dr == DialogResult.OK)
             {
                 if (Outil.DeleteSujet((int)cbBxSubject.SelectedValue) != 1)
                 {
-                    MessageBox.Show(Properties.Resources.MsgBoxErreurDeleteSujetText, 
+                    MessageBox.Show(Properties.Resources.MsgBoxErreurDeleteSujetText,
                     Properties.Resources.MsgBoxErreurDeleteSujetTitre);
                 }
-                List<Subject> subjects = 
+                List<Subject> subjects =
                     Outil.GetSujetsByCategorieID((int)cbBxRubric.SelectedValue);
 
                 if (subjects != null)
@@ -342,9 +342,9 @@ namespace IHMFR
 
         #endregion
 
-        #region Affichage des posts en détail                
+        #region Affichage des posts en détail
 
-        private void dGVPost_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGVPost_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int CurrentRow = e.RowIndex;
 
@@ -358,6 +358,5 @@ namespace IHMFR
             }
         }
         #endregion
-
     }
 }
